@@ -11,6 +11,7 @@ import logout from "../../assets/Logout.png";
 import "./movieItem.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -33,6 +34,7 @@ const MovieItem = () => {
             })
     }, [id])
 
+    const date = new Date(movie?.release_date).toUTCString();
 
     return (
         <div className="movieItem">
@@ -42,7 +44,7 @@ const MovieItem = () => {
                     <p>MovieBox</p>
                 </div>
                 <ul className="navList">
-                    <li><img src={home} alt="homeIcon" />Home</li>
+                    <li><img src={home} alt="homeIcon" /><Link style={{ color: "grey", fontWeight: "bold" }} to="/">Home</Link></li>
                     <li><img src={Projector} alt="projector" />Movies</li>
                     <li><img src={tvShow} alt="tvShow" />TV Series</li>
                     <li><img src={calendar} alt="calendar" />Upcoming</li>
@@ -64,33 +66,35 @@ const MovieItem = () => {
                 <div className="playingVidDetails">
                     <div className="movieTitle">
                         <h4 data-testid="movie-title">{movie?.title}</h4>
-                        <h4 data-testid="movie-release-date">{movie?.release_date}</h4>
-                        <h4 data-testid="movie-runtime">duration</h4>
+                        <h4 data-testid="movie-release-date">{date}</h4>
+                        <h4>PG-13 .</h4>
+                        <h4 data-testid="movie-runtime">2h10m</h4>
                         <h6>{movie.genre_ids}</h6>
                     </div>
                     <div>
-                        {movie.vote_average}
+                        {movie.vote_average}/
+                        {movie.vote_count}k
                     </div>
                 </div>
                 <div className="movieDetails">
                     <div className="movieDetailsLeft">
                         <p data-testid="movie-overview" className="description">{movie?.overview}</p>
                         <span>
-                            <p>Director</p>:
+                            <p>Director </p>:
                             <p>Joseph Kosinki</p>
                         </span>
                         <span>
-                            <p>Writers</p>:
-                            <p>writers</p>
+                            <p>Writers </p>:
+                            <p> Jim Cash, Jack Epps Jr, Peter Craig</p>
                         </span>
                         <span>
-                            <p>Stars</p>:
-                            <p>stars</p>
+                            <p>Stars </p>:
+                            <p>Tom Cruise, Jennifer Connelly, Miles Teller</p>
                         </span>
                         <div className="topRated">
                             <button>Top rated movie #65</button>
                             <select name="" id="">
-                                <option value=""></option>
+                                <option value="">Award 9 nominations</option>
                             </select>
                         </div>
 

@@ -3,7 +3,7 @@ import tvShow from "../../assets/TV Show.png";
 import Projector from "../../assets/Projector.png";
 import calendar from "../../assets/Calendar.png";
 import home from "../../assets/Home.png";
-import list from "../../assets/list.png";
+import list from "../../assets/List.png";
 import tickets from "../../assets/Two Tickets.png";
 import Rectangle from "../../assets/Rectangle.png";
 import logout from "../../assets/Logout.png";

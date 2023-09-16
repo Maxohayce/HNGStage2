@@ -3,7 +3,7 @@ import tvShow from "../../assets/TV Show.png";
 import Projector from "../../assets/Projector.png";
 import calendar from "../../assets/Calendar.png";
 import home from "../../assets/Home.png";
-import list from "../../assets/list.png";
+import list from "../../assets/List.png";
 import tickets from "../../assets/Two Tickets.png";
 import Rectangle from "../../assets/Rectangle.png";
 import logout from "../../assets/Logout.png";
@@ -63,9 +63,9 @@ const MovieItem = () => {
                 <img className="playingVid" src={API_IMG + movie.backdrop_path} alt="backdrop" />
                 <div className="playingVidDetails">
                     <div className="movieTitle">
-                        <h4>{movie?.title}</h4>
-                        <h4>{movie?.release_date}</h4>
-                        <h4>duration</h4>
+                        <h4 data-testid="movie-title">{movie?.title}</h4>
+                        <h4 data-testid="movie-release-date">{movie?.release_date}</h4>
+                        <h4 data-testid="movie-runtime">duration</h4>
                         <h6>{movie.genre_ids}</h6>
                     </div>
                     <div>
@@ -74,7 +74,7 @@ const MovieItem = () => {
                 </div>
                 <div className="movieDetails">
                     <div className="movieDetailsLeft">
-                        <p className="description">{movie?.overview}</p>
+                        <p data-testid="movie-overview" className="description">{movie?.overview}</p>
                         <span>
                             <p>Director</p>:
                             <p>Joseph Kosinki</p>

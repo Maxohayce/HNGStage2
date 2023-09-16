@@ -66,7 +66,7 @@ const Home = () => {
                     {movies.length > 0 ? (
                         <div className="movieCards">
                             {movies.slice(0, 10).map((movieReq) =>
-                                <Link to={`/movieItem/${movieReq.id}`} key={movieReq.id}> <Card {...movieReq} /></Link>)}
+                                <Link style={{ color: "grey" }} to={`/movieItem/${movieReq.id}`} key={movieReq.id}> <Card {...movieReq} /></Link>)}
                         </div>
                     ) : (
                         <h2>Sorry! There are no movies to display</h2>

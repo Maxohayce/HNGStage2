@@ -1,0 +1,56 @@
+.home {
+  /* width: 100%; */
+}
+
+.landingPage {
+  background-image: url("https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1695600000&Signature=OsNLaMa8CnSNnQeUuaSqQc4ItYP-nbUj0fcZVpScVICd8NzZdIEz80MJBNhEju2IQOUMxTFuDw4FavRj8rGqkBK6uLeq0vJG~Y-EPhP~LInckDsnzuQ5Y2BdrMTWOqkPaFdDAPmQXSLpWteihqFaB2f2VQGC6Za5gHu7t3hq62C0X21qB-8H7osPvHdFmh0c-B881mmDx6JQCfpUQRzNHAjMxdvS~LrFQthLfxQb29n8J4z25KNx4cSOzRDCMXJaP0gpPcPRXMYrFdz-nbt~yFJLM37b1YLKasT2gd5K2x6nxGQWVPlwAafWCDzo3TzVihPSl0FiwjfkbBREka5jUQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-size: contain;
+  height: 40rem;
+  margin-top: -0.8rem;
+}
+
+.landingContent {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: start;
+  width: 25.25rem;
+  margin-right: 52.5rem;
+  color: #fff;
+  height: 17.5rem;
+  margin-top: 2rem;
+}
+.movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  align-items: center;
+}
+
+.movieHeader h3 {
+  font-size: 2.25rem;
+}
+
+.movieHeader p {
+  color: #ff0000;
+}
+
+.movieCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-column-gap: 15rem;
+}
+
+.trailerButton {
+  display: flex;
+  align-items: center;
+  background-color: #ff0000;
+}
